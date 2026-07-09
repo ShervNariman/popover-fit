@@ -1,0 +1,20 @@
+/**
+ * popover-fit
+ * A tiny CSS utility that makes shadcn/Radix Popover content match its
+ * trigger's width and stay inside the viewport.
+ *
+ * Usage:
+ *   <PopoverContent className="popover-fit">
+ *
+ * This relies on CSS custom properties that Radix's Popover already sets
+ * on the content element for you — no JavaScript, no config, no extra
+ * dependencies:
+ *   --radix-popover-trigger-width
+ *   --radix-popover-content-available-height
+ */
+
+.popover-fit {
+  width: var(--radix-popover-trigger-width);
+  max-height: var(--radix-popover-content-available-height);
+  overflow-y: auto;
+}
