@@ -41,17 +41,13 @@ function useElementWidth<T extends HTMLElement>() {
 
   const ref = React.useCallback((el: T | null) => {
     setNode(el);
+    setWidth(el ? Math.round(el.getBoundingClientRect().width) : null);
   }, []);
 
   React.useEffect(() => {
-    if (!node) {
-      setWidth(null);
-      return;
-    }
+    if (!node) return;
 
     const update = () => setWidth(Math.round(node.getBoundingClientRect().width));
-    update();
-
     const observer = new ResizeObserver(update);
     observer.observe(node);
     return () => observer.disconnect();
