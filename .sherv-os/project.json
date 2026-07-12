@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "projectId": "popover-fit",
+  "repository": "ShervNariman/popover-fit",
+  "localFolderCandidates": ["popover-fit"],
+  "clientEnvFile": ".env.local",
+  "allowedCapabilities": ["general", "fast", "review", "summarization"],
+  "allowModelOverride": false,
+  "enabled": true,
+  "privacyClass": "public-product",
+  "activation": "registered-inactive",
+  "credentialSource": "local-only"
+}
